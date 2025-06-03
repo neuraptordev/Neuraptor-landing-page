@@ -358,9 +358,10 @@ export default function RootLayout({
                 <link rel="alternate" hrefLang="x-default" href="https://neuraptor.com.br" />
             </head>
             <body>
-            <Analytics/>
-            <SpeedInsights/>
-                {children}</body>
+                {children}
+                <Analytics/>
+                <SpeedInsights/>
+                </body>
         </html>
     )
 }
