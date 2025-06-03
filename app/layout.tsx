@@ -1,5 +1,8 @@
 import type React from "react"
 import type { Metadata } from "next"
+import { Analytics } from "@vercel/analytics/next"
+import {SpeedInsights} from "@vercel/speed-insights/next"
+
 import "./globals.css"
 
 export const metadata: Metadata = {
@@ -354,7 +357,10 @@ export default function RootLayout({
                 <link rel="alternate" hrefLang="en-US" href="https://neuraptor.com.br/en" />
                 <link rel="alternate" hrefLang="x-default" href="https://neuraptor.com.br" />
             </head>
-            <body>{children}</body>
+            <body>
+            <Analytics/>
+            <SpeedInsights/>
+                {children}</body>
         </html>
     )
 }

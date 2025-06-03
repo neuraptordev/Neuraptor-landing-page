@@ -6,8 +6,6 @@ import {Settings, Smartphone, Palette, Code, Zap, Brain, Search, Presentation, P
 import {useState} from "react"
 import {ChevronUp} from "lucide-react"
 import {useEffect} from "react"
-import {SpeedInsights} from "@vercel/speed-insights/next"
-import { Analytics } from "@vercel/analytics/next"
 
 export default function NeuraptorLanding() {
   const [language, setLanguage] = useState<"pt" | "en">("pt")
@@ -223,8 +221,7 @@ export default function NeuraptorLanding() {
 
   return (
     <>
-      <Analytics/>
-      <SpeedInsights/>
+   
       <div
         className="min-h-screen bg-gradient-to-b from-[#0A0909] via-[#09101F] to-[#000000] text-white font-['Poppins',sans-serif] relative overflow-hidden">
         {/* Corner Blue Shadows - More Intense */}
